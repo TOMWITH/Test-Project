@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #eee;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 2rem 1rem;
+}
+
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  background: linear-gradient(90deg, #f5deb3, #daa520);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  margin-top: 0.4rem;
+  font-size: 0.95rem;
+  color: #aaa;
+}
+
+.status-bar {
+  padding: 0.6rem 1.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  min-width: 220px;
+  text-align: center;
+}
+
+#status-text {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.board-wrapper {
+  position: relative;
+  padding: 12px;
+  background: linear-gradient(145deg, #8b6914, #6b4f0a);
+  border-radius: 8px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+#board-canvas {
+  display: block;
+  border-radius: 4px;
+  cursor: crosshair;
+  max-width: 90vw;
+  max-height: 90vw;
+  height: auto;
+}
+
+#board-canvas.thinking {
+  cursor: wait;
+}
+
+.footer {
+  margin-top: 0.5rem;
+}
+
+#restart-btn {
+  padding: 0.65rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  background: linear-gradient(135deg, #f5deb3, #daa520);
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 4px 12px rgba(218, 165, 32, 0.3);
+}
+
+#restart-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(218, 165, 32, 0.45);
+}
+
+#restart-btn:active {
+  transform: translateY(0);
+}
+
+.upload-status {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: #aaa;
+  min-height: 1.2em;
+  text-align: center;
+}
+
+.upload-status.success {
+  color: #7ec87e;
+}
+
+.upload-status.error {
+  color: #e07070;
+}
+
+@media (max-width: 640px) {
+  .header h1 {
+    font-size: 1.6rem;
+  }
+
+  .container {
+    gap: 1rem;
+    padding: 1rem 0.5rem;
+  }
+}

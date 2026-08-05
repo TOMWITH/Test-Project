@@ -1,0 +1,9 @@
+{
+  "name": "gomoku-game",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "setup-cors": "node setup-cors.js"
+  }
+}

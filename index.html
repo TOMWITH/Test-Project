@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>五子棋 - 人机对战</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>五子棋</h1>
+      <p class="subtitle">人机对战 · 您执黑先手</p>
+    </header>
+
+    <div class="status-bar">
+      <span id="status-text">轮到您落子（黑棋）</span>
+    </div>
+
+    <div class="board-wrapper">
+      <canvas id="board-canvas" width="600" height="600"></canvas>
+    </div>
+
+    <footer class="footer">
+      <button id="restart-btn" type="button">重新开始</button>
+      <p id="upload-status" class="upload-status"></p>
+    </footer>
+  </div>
+
+  <script src="js/oss-upload.js"></script>
+  <script src="js/ai.js"></script>
+  <script src="js/board.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
